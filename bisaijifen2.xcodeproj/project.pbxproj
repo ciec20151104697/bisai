@@ -14,6 +14,8 @@
 		FE05B1151EAD948300560E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE05B1131EAD948300560E9C /* LaunchScreen.storyboard */; };
 		FE05B1201EAD948300560E9C /* bisaijifen2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05B11F1EAD948300560E9C /* bisaijifen2Tests.swift */; };
 		FE05B12B1EAD948300560E9C /* bisaijifen2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05B12A1EAD948300560E9C /* bisaijifen2UITests.swift */; };
+		FE05B1391EAD974600560E9C /* u=486216200,1053836365&fm=23&gp=0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE05B1381EAD974600560E9C /* u=486216200,1053836365&fm=23&gp=0.jpg */; };
+		FE05B13B1EAD9C7400560E9C /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE05B13A1EAD9C7400560E9C /* 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		FE05B1261EAD948300560E9C /* bisaijifen2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bisaijifen2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE05B12A1EAD948300560E9C /* bisaijifen2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bisaijifen2UITests.swift; sourceTree = "<group>"; };
 		FE05B12C1EAD948300560E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE05B1381EAD974600560E9C /* u=486216200,1053836365&fm=23&gp=0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "u=486216200,1053836365&fm=23&gp=0.jpg"; sourceTree = "<group>"; };
+		FE05B13A1EAD9C7400560E9C /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		FE05B1091EAD948200560E9C /* bisaijifen2 */ = {
 			isa = PBXGroup;
 			children = (
+				FE05B13A1EAD9C7400560E9C /* 1.jpg */,
+				FE05B1381EAD974600560E9C /* u=486216200,1053836365&fm=23&gp=0.jpg */,
 				FE05B10A1EAD948200560E9C /* AppDelegate.swift */,
 				FE05B10C1EAD948200560E9C /* ViewController.swift */,
 				FE05B10E1EAD948200560E9C /* Main.storyboard */,
@@ -232,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE05B1391EAD974600560E9C /* u=486216200,1053836365&fm=23&gp=0.jpg in Resources */,
 				FE05B1151EAD948300560E9C /* LaunchScreen.storyboard in Resources */,
 				FE05B1121EAD948200560E9C /* Assets.xcassets in Resources */,
 				FE05B1101EAD948200560E9C /* Main.storyboard in Resources */,
+				FE05B13B1EAD9C7400560E9C /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
