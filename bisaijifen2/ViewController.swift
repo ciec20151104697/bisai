@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var defen1: UITextField!
     @IBOutlet weak var defen2: UITextField!
     @IBOutlet weak var zongfen1: UITextField!
     @IBOutlet weak var zongfen2: UITextField!
+    var flagA:Int!
+    var flagB:Int!
     var  Ascore:String!=""
     var  Bscore:String!=""
     var  Atotal:String!=""
@@ -84,6 +88,61 @@ class ViewController: UIViewController {
         defen2.text=end;
         zongfen1.text=end;
         zongfen2.text=end;
+    }
+    @IBAction func Aphoto(_ sender: Any) {
+    
+            flagA=1
+            flagB=0
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                //初始化图片控制器
+                let picker = UIImagePickerController()
+                //设置代理
+                picker.delegate = self
+                //指定图片控制器类型
+                picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                //弹出控制器，显示界面
+                self.present(picker, animated: true, completion: {
+                    () -> Void in
+                })
+            }else{
+                print("读取相册错误")
+            }
+        
+    }
+    @IBAction func Bphoto(_ sender: UIButton) {
+        
+            flagA=0
+            flagB=1
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                //初始化图片控制器
+                let picker = UIImagePickerController()
+                //设置代理
+                picker.delegate = self
+                //指定图片控制器类型
+                picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                //弹出控制器，显示界面
+                self.present(picker, animated: true, completion: {
+                    () -> Void in
+                })
+            }else{
+                print("读取相册错误")
+            }
+        
+    }
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        //查看info对象
+        print(info)
+        //显示的图片
+        let image:UIImage!
+        //获取选择的原图
+        image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        if(flagA==1){image1.image = image}
+        else if(flagB==1){image2.image = image}
+        //图片控制器退出
+        picker.dismiss(animated: true, completion: {
+            () -> Void in
+        })
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
