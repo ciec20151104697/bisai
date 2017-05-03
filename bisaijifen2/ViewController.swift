@@ -46,19 +46,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         defen1.text="\(Adefen)"
     }
     @IBAction func Bscore(_ sender: UIButton) {
-        if(Bdefen<30)
-        {
-            Bdefen = Bdefen+15;
-        }
-        else if(Bdefen<40)
-        {
-            Bdefen = Bdefen+10;
-        }
-        else
-        {
-            Bdefen = 0;
-        }
-        defen2.text="\(Bdefen)"
+        
     }
     @IBAction func Atotal(_ sender: UIButton) {
         if(Azongfen<7)
@@ -72,22 +60,19 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         zongfen1.text="\(Azongfen)"
     }
     @IBAction func Btotal(_ sender: UIButton) {
-        if(Bzongfen<7)
+        
+    }
+    @IBAction func end(_ sender: UIButton) {
+        if(Azongfen>Bzongfen)
         {
-            Bzongfen = Bzongfen+1;
+            zongfen1.text="win";
+            zongfen2.text="lost";
         }
         else
         {
-            Bzongfen = 0;
+            zongfen1.text="lost";
+            zongfen2.text="win";
         }
-        zongfen2.text="\(Bzongfen)"
-    }
-    @IBAction func end(_ sender: UIButton) {
-        end="0"
-        defen1.text=end;
-        defen2.text=end;
-        zongfen1.text=end;
-        zongfen2.text=end;
     }
     @IBAction func Aphoto(_ sender: Any) {
     
