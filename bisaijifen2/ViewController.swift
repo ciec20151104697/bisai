@@ -60,7 +60,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         zongfen1.text="\(Azongfen)"
     }
     @IBAction func Btotal(_ sender: UIButton) {
-        
+        if(Bzongfen<7)
+        {
+            Bzongfen = Bzongfen+1;
+        }
+        else
+        {
+            Bzongfen = 0;
+        }
+        zongfen2.text="\(Bzongfen)"
     }
     @IBAction func end(_ sender: UIButton) {
         if(Azongfen>Bzongfen)
