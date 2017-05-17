@@ -19,59 +19,65 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     var flagB:Int!
     var  Ascore:String!=""
     var  Bscore:String!=""
-    var  Atotal:String!=""
-    var  Btotal:String!=""
     var  end:String!=""
-    var  Adefen:Int=0
-    var  Bdefen:Int=0
-    var  Azongfen:Int=0
-    var  Bzongfen:Int=0
+    var  star:String!=""
+    var  Agoal:Int=0
+    var  Bgoal:Int=0
+    var  Atotal:Int=0
+    var  Btotal:Int=0
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     @IBAction func Ascore(_ sender: UIButton) {
-        if(Adefen<30)
+        if(Agoal<30)
         {
-            Adefen = Adefen+15;
+            Agoal = Agoal+15;
         }
-        else if(Adefen<40)
+        else if(Agoal<40)
         {
-            Adefen = Adefen+10;
+            Agoal = Agoal+10;
         }
         else
         {
-            Adefen = 0;
+            Agoal = 0;
         }
-        defen1.text="\(Adefen)"
+        defen1.text="\(Agoal)"
+        if(Agoal==40 && Bgoal<40)
+        {
+            if(Atotal==0)
+            {
+                Atotal=1;
+                zongfen1.text="\(Atotal)"
+                Atotal=0;
+                zongfen1.text="0"
+                zongfen2.text="0"
+            }
+        }
     }
     @IBAction func Bscore(_ sender: UIButton) {
-        
-    }
-    @IBAction func Atotal(_ sender: UIButton) {
-        if(Azongfen<7)
+        if(Bgoal<30)
         {
-            Azongfen = Azongfen+1;
+            Bgoal = Bgoal+15;
+        }
+        else if(Bgoal<40)
+        {
+            Bgoal = Bgoal+10;
         }
         else
         {
-            Azongfen = 0;
+            Bgoal = 0;
         }
-        zongfen1.text="\(Azongfen)"
-    }
-    @IBAction func Btotal(_ sender: UIButton) {
-        if(Bzongfen<7)
+        defen2.text="\(Bgoal)"
+        if(Bgoal==40 && Btotal<7)
         {
-            Bzongfen = Bzongfen+1;
+            Btotal = Btotal+1;
         }
-        else
-        {
-            Bzongfen = 0;
-        }
-        zongfen2.text="\(Bzongfen)"
+        zongfen2.text="\(Btotal)"
+
     }
     @IBAction func end(_ sender: UIButton) {
-        if(Azongfen>Bzongfen)
+        if(Atotal>Btotal)
         {
             zongfen1.text="win";
             zongfen2.text="lost";
@@ -81,6 +87,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             zongfen1.text="lost";
             zongfen2.text="win";
         }
+    }
+    @IBAction func star(_ sender: UIButton) {
+        Agoal=0;
+        Bgoal=0;
+        Atotal=0;
+        Btotal=0;
     }
     @IBAction func Aphoto(_ sender: Any) {
     

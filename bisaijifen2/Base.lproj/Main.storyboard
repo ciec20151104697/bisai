@@ -72,22 +72,6 @@
                                     <action selector="Bscore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ic3-nj-ZdE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zx-ry-Hgd">
-                                <rect key="frame" x="48" y="391" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="得分"/>
-                                <connections>
-                                    <action selector="Atotal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xhs-lp-scN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-A9-jc5">
-                                <rect key="frame" x="242" y="391" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="得分"/>
-                                <connections>
-                                    <action selector="Btotal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qRD-Sa-Stf"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QjY-31-j2w">
                                 <rect key="frame" x="217" y="169" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -127,6 +111,14 @@
                                     <action selector="Aphoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jmz-xW-Gu4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kk-G1-q4n">
+                                <rect key="frame" x="130" y="281" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="比赛开始"/>
+                                <connections>
+                                    <action selector="star:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfb-hg-Bf4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -141,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="61"/>
+            <point key="canvasLocation" x="-135.19999999999999" y="60.719640179910051"/>
         </scene>
     </scenes>
     <resources>
