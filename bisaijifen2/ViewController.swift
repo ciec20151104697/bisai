@@ -25,6 +25,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     var  Bgoal:Int=0
     var  Atotal:Int=0
     var  Btotal:Int=0
+    var  temp:Int=0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +35,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         {
             Agoal = Agoal+15;
         }
-        else if(Agoal<40)
+        else if(Agoal<50)
         {
             Agoal = Agoal+10;
         }
@@ -43,16 +44,20 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             Agoal = 0;
         }
         defen1.text="\(Agoal)"
-        if(Agoal==40 && Bgoal<40)
+        if(Agoal==50&&Atotal<7)
         {
-            if(Atotal==0)
-            {
-                Atotal=1;
-                zongfen1.text="\(Atotal)"
-                Atotal=0;
-                zongfen1.text="0"
-                zongfen2.text="0"
-            }
+           if(zongfen1.text=="0")
+           {
+               Atotal = 1
+               zongfen1.text="\(Atotal)"
+               defen1.text="0"
+           }
+           else
+           {
+                Atotal = Atotal+1
+                zongfen1.text = "\(Atotal)"
+                defen1.text="0"
+           }
         }
     }
     @IBAction func Bscore(_ sender: UIButton) {
@@ -60,7 +65,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         {
             Bgoal = Bgoal+15;
         }
-        else if(Bgoal<40)
+        else if(Bgoal<50)
         {
             Bgoal = Bgoal+10;
         }
@@ -69,12 +74,21 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             Bgoal = 0;
         }
         defen2.text="\(Bgoal)"
-        if(Bgoal==40 && Btotal<7)
+        if(Bgoal==50&&Btotal<7)
         {
-            Btotal = Btotal+1;
+            if(zongfen1.text=="0")
+            {
+                Btotal = 1
+                zongfen2.text="\(Btotal)"
+                defen2.text="0"
+            }
+            else
+            {
+                Btotal = Btotal+1
+                zongfen2.text = "\(Btotal)"
+                defen2.text="0"
+            }
         }
-        zongfen2.text="\(Btotal)"
-
     }
     @IBAction func end(_ sender: UIButton) {
         if(Atotal>Btotal)
@@ -89,10 +103,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
     }
     @IBAction func star(_ sender: UIButton) {
-        Agoal=0;
-        Bgoal=0;
-        Atotal=0;
-        Btotal=0;
+        defen1.text="0"
+        defen2.text="0"
+        zongfen1.text="0"
+        zongfen2.text="0"
     }
     @IBAction func Aphoto(_ sender: Any) {
     
